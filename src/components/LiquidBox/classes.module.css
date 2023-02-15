@@ -1,0 +1,42 @@
+.content {
+  z-index: 2;
+  color: #121619;
+  mix-blend-mode: soft-light;
+}
+
+.outer {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  border: #2d4739 4px solid;
+  border-radius: 10px;
+  background-color: #09814a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.liquid {
+  position: absolute;
+  z-index: 1;
+  min-width: 200%;
+  min-height: 225%;
+  border-radius: 40%;
+  background-color: #e5c687;
+  animation-fill-mode: forwards;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-850px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
