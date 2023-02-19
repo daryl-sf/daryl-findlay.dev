@@ -1,0 +1,35 @@
+.diagonal {
+  --skew-angle: -5deg;
+  /* #e96d5e, 
+  #ff9760,
+  #ffe69d */
+  --background: linear-gradient(
+                  30deg, 
+                  #321450,
+                  #860029,
+                  #de004e,
+                  #f887ff,
+                  #29132e
+                );
+  --margin-padding: 5rem;
+
+  position: relative;
+  isolation: isolate;
+  padding-block: var(--margin-padding);
+  margin-block: var(--margin-padding);
+}
+
+.diagonal::after {
+  content: '';
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+
+.wrapper {
+  max-width: 55rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
