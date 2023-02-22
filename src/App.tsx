@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./App.module.css";
 import DiagonalDiv from "./components/DiagonalDiv";
+import { Hexagon, HexGrid } from "./components/Hexagon";
 
 const App = () => {
   return (
@@ -16,6 +17,14 @@ const App = () => {
           </div>
         </section>
       </DiagonalDiv>
+      <HexGrid>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+        <Hexagon><p>Daryl Findlay</p></Hexagon>
+      </HexGrid>
     </div>
   );
 };
