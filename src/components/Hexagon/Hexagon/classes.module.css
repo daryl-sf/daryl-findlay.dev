@@ -1,0 +1,23 @@
+.hexagon {
+  --width: 200px;
+  background: gold;
+  width: var(--width);
+  height: calc(var(--width) * 1.1547);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  margin: 6px;
+  margin-bottom: calc(6px - var(--width) * 0.2885); 
+  font-size: initial;
+  display: inline-flex;
+  font-size:initial;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hexagon:hover {
+  transform: scale(1.1);
+  box-shadow: inset 10px 10px 100px -13px rgba(255,235,186,1);
+}
+
+.hexagon > * {
+  text-align: center;
+  margin: auto;
+}

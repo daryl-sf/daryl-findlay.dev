@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+}
+.container {
+  font-size: 0; /*disable white space between inline block element */
+}
+.container::before {
+  content: "";
+  width: calc(200px / 2 + 6px);
+  float: left;
+  height: 120%;
+  --f: calc(1.732 * 200px + 4 * 6px  - 1px);
+  shape-outside: repeating-linear-gradient(     
+                   #0000 0 calc(var(--f) - 3px),      
+                   #000  0 var(--f));
+}
