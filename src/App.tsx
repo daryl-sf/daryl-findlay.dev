@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import classes from "./App.module.css";
 import DiagonalDiv from "./components/DiagonalDiv";
 
 const App = () => {
+  const analytics = getAnalytics();
+  useEffect(() => {
+    logEvent(analytics, "page_viewed");
+  }, []);
   return (
     <div className="App">
       <DiagonalDiv>
