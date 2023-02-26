@@ -1,4 +1,18 @@
+.main {
+  --background: linear-gradient(
+                  30deg,
+                  #321450,
+                  #860029,
+                  #de004e,
+                  #f887ff,
+                  #29132e
+                );
+  background: var(--background);
+  padding: 1.5rem;
+}
+
 .h1 {
+  margin-block-start: 0;
   margin-block-end: 0;
 }
 
