@@ -1,15 +1,23 @@
-import React, { useEffect } from "react";
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { useEffect, useState } from "react";
+import { getAuth, onAuthStateChanged, User } from "firebase/auth";
 import classes from "./App.module.css";
 import DiagonalDiv from "./components/DiagonalDiv";
+import { setUpFirebase } from "./lib/firebase";
+import SignInButton from "./components/SignInButton";
+import SignOut from "./components/SignOut";
 
 const App = () => {
-  const analytics = getAnalytics();
+  const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
-    logEvent(analytics, "page_viewed");
+    setUpFirebase();
+    onAuthStateChanged(getAuth(), setUser);
   }, []);
+
   return (
     <div className="App">
+      <br />
+      {user && (<><p>Welcome {user.displayName}</p><SignOut /></>)}
+      {!user && <SignInButton />}
       <DiagonalDiv>
         <section>
           <h1 className={classes.h1}>Hello, I&apos;m Daryl!</h1>
