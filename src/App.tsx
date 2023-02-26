@@ -5,12 +5,14 @@ import DiagonalDiv from "./components/DiagonalDiv";
 import { setUpFirebase } from "./lib/firebase";
 import SignInButton from "./components/SignInButton";
 import SignOut from "./components/SignOut";
+import { trackPageView } from "./util/analytics";
 
 const App = () => {
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
     setUpFirebase();
     onAuthStateChanged(getAuth(), setUser);
+    trackPageView();
   }, []);
 
   return (
