@@ -1,20 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
+import Layout from "./pages/Layout";
+import NoMatch from "./pages/NoMatch";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Homepage />,
-    },
-    {
-      path: "/test",
-      element: <div>test</div>
-    }
-  ]);
-
   return (
-    <RouterProvider router={router} />
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="test" element={<div>Test Route</div>} />
+
+          {/* catch all for 404 */}
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };
 

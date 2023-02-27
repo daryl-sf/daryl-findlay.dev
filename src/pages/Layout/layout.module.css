@@ -1,0 +1,10 @@
+.nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.active {
+  text-decoration: underline;
+  color: #de004e;
+}
