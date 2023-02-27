@@ -1,10 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav > ul {
   list-style-type: none;
   display: flex;
   gap: 2rem;
+  align-items: center;
+}
+
+.nav > ul:last-of-type {
+  margin-inline-end: 1rem;
 }
 
 .active {
   text-decoration: underline;
   color: #de004e;
+}
+
+.content {
+  padding: 1.5rem;
+  place-content: center;
 }
