@@ -19,7 +19,7 @@ const firebaseConfig = {
 
 let app: FirebaseApp;
 // const useEmulator = () => import.meta.env.VITE_USE_FIREBASE_EMULATOR;
-
+console.log(firebaseConfig);
 export const setUpFirebase = () => {
   try {
     app = initializeApp(firebaseConfig);
