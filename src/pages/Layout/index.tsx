@@ -1,6 +1,5 @@
 import { User } from "firebase/auth";
 import { NavLink, Outlet } from "react-router-dom";
-import SignInButton from "../../components/SignInButton";
 import SignOut from "../../components/SignOut";
 import classes from "./layout.module.css";
 
@@ -18,9 +17,9 @@ const Layout = ({ user }: { user: User | null }) => {
               Home
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/test" className={({ isActive }) => isActive ? classes.active : undefined}>Test</NavLink>
-          </li>
+          </li> */}
         </ul>
         <ul>
           {user && (
@@ -29,7 +28,7 @@ const Layout = ({ user }: { user: User | null }) => {
               <li><SignOut /></li>
             </>
           )}
-          {!user && <li><SignInButton /></li>}
+          {!user && <li><NavLink to="/sign-in" className={({ isActive }) => isActive ? classes.active : undefined}>Sign In</NavLink></li>}
         </ul>
       </nav>
       <div className={classes.content}>

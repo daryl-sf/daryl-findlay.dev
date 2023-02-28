@@ -5,6 +5,7 @@ import { setUpFirebase } from "./lib/firebase";
 import Homepage from "./pages/Homepage";
 import Layout from "./pages/Layout";
 import NoMatch from "./pages/NoMatch";
+import SignIn from "./pages/SignIn";
 import { trackPageView } from "./util/analytics";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout user={user} />}>
           <Route index element={<Homepage />} />
+          <Route path="sign-in" element={<SignIn />} />
           <Route path="test" element={<div>Test Route</div>} />
 
           {/* catch all for 404 */}
