@@ -43,24 +43,20 @@
 }
 
 .contact {
-  color: purple;
-  background: linear-gradient(
-    30deg,
-    #c4ffff,
-    #08deea,
-    #1261d1
-  );
+  color: white;
   border-radius: 8px;
-  border: 1px solid purple;
-  padding: 0.6rem 1.2rem;
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px -4px;
-  font-size: 1rem;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
   font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, color 0.25s;
 }
 .contact:hover {
   border-color: #646cff;
+  color: #646cff;
 }
 .contact:focus,
 .contact:focus-visible {
