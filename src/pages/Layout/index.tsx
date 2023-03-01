@@ -24,7 +24,7 @@ const Layout = ({ user }: { user: User | null }) => {
         <ul>
           {user && (
             <>
-              <li>Welcome {user.displayName}</li>
+              <li>Welcome {user.displayName || user.email?.split("@")[0]}</li>
               <li><SignOut /></li>
             </>
           )}

@@ -1,7 +1,7 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useAuth } from "../lib/firebase";
+import { useAuth } from "../../lib/firebase";
 
-const SignInButton = ({ redirect = () => null }: { redirect?: () => void}) => {
+const Google = ({ redirect = () => null }: { redirect?: () => void}) => {
   const handleSignIn = () => {
     signInWithPopup(useAuth(), new GoogleAuthProvider()).then(redirect);
   };
@@ -11,4 +11,4 @@ const SignInButton = ({ redirect = () => null }: { redirect?: () => void}) => {
   );
 };
 
-export default SignInButton;
+export default Google;

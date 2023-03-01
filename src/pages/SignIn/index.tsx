@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router";
-import SignInButton from "../../components/SignInButton";
+import { Google } from "../../components/SignInButtons";
+import SignInForm from "../../components/SignInForm";
 
 const SignIn = () => {
   const navigate = useNavigate();
   return (
     <section>
-      <SignInButton redirect={() => navigate("/")}/>
+      <SignInForm redirect={() => navigate("/")} />
+      <hr />
+      <Google redirect={() => navigate("/")} />
     </section>
   );
 };
