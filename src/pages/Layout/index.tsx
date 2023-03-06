@@ -14,7 +14,14 @@ const Layout = ({ user }: { user: User | null }) => {
               className={({ isActive }) => isActive ? classes.active : undefined
               }
             >
-              Home
+              Home 🏡
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="mailto:darylfindlay@gmail.com?subject=I'm%20interested%20in%20hiring%20you!&body=Hi%20Daryl%2C%20I'm%20interested%20in%20your%20work.%20Let's%20connect!"
+            >
+              Contact ✉️
             </NavLink>
           </li>
           {/* <li>
